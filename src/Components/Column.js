@@ -18,6 +18,7 @@ function Column({
   renameColumn,
   addTask,
   deleteColumnTask,
+  deleteColumn,
 }) {
   const [isFormVisible, setIsFormVisible] = useState(false);
   const [newColumnName, setNewColumnName] = useState(column.columnName);
@@ -112,6 +113,12 @@ function Column({
           )}
         >
           <div className="app-column-header" {...provided.dragHandleProps}>
+            <div
+              onClick={() => deleteColumn(index)}
+              className="app-close-column"
+            >
+              <CloseIcon color="action" fontSize={"10px"} />
+            </div>
             {!isFormVisible ? (
               <h3
                 onClick={() => setIsFormVisible(true)}

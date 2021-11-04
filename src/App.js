@@ -39,6 +39,12 @@ function App() {
     setState(newState);
   };
 
+  const deleteColumn = (columnIndex) => {
+    const newState = [...state];
+    newState.splice(columnIndex, 1);
+    setState(newState);
+  };
+
   const deleteColumnTask = (columnIndex, taskIndex) => {
     const newState = [...state];
     let columnTasks = newState[columnIndex].tasks;
@@ -150,6 +156,7 @@ function App() {
                       renameColumn={renameColumn}
                       addTask={addTask}
                       deleteColumnTask={deleteColumnTask}
+                      deleteColumn={deleteColumn}
                     />
                   );
                 })}

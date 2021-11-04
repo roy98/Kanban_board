@@ -126,17 +126,18 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 .app-column-task-counter {
   width: 25px;
   height: 25px;
-  border: 2px solid #80808069;
+  border: 2px solid #8080804f;
   border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #80808069;
+  color: #808080e8;
 }
 
 .app-column-add {
@@ -190,6 +191,15 @@
   top: 0;
   right: 0;
   margin: 10px;
+  cursor: pointer;
+}
+
+.app-close-column {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: -10px;
+  margin-right: -10px;
   cursor: pointer;
 }
 
